@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        DOCKER_IMAGE_NAME = "anothernadav/train-schedule"
-    }
     stages {
         stage('Build') {
             steps {
@@ -17,7 +14,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build(DOCKER_IMAGE_NAME)
+                    app = docker.build("anothernadav/train-schedule")
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
