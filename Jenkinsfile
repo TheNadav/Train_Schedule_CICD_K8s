@@ -44,8 +44,6 @@ pipeline {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_credentials_id', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
                     sh '''
                         aws eks --region us-east-1 update-kubeconfig --name eks-50tDfLCM
-                        sed -i "s/\\\$DOCKER_IMAGE_NAME/anothernadav\\/train-schedule/g" train-schedule-kube.yml
-                        sed -i "s/\\\$BUILD_NUMBER/'"$BUILD_NUMBER"'/g" train-schedule-kube.yml
                         kubectl apply -f train-schedule-kube.yml
                     '''
                 }
