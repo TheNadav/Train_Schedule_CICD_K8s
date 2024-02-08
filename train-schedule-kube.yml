@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: train-schedule
-        image: nothernadav/train-schedule:latest
+        image: anothernadav/train-schedule:latest
         ports:
         - containerPort: 80
 
