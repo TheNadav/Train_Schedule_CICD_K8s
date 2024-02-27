@@ -1,15 +1,28 @@
-# cicd-pipeline-train-schedule-kubernetes
+# Kubernetes CI/CD Pipeline: Train Schedule Application
 
-This is a simple train schedule app written using nodejs. It is intended to be used as a sample application for a series of hands-on learning activities.
+This repository contains a simplistic train schedule application, developed using Node.js. The application serves as a practical example for various hands-on learning exercises, particularly focusing on CI/CD pipelines and Kubernetes.
 
-## Running the app
+## Prerequisites
 
-You need a Java JDK 7 or later to run the build. You can run the build like this:
+To run and build this application, you will need:
 
-    ./gradlew build
+- Java JDK 7 or later
+
+## Building the Application
+
+To build the application, execute the following command in your terminal:
+
+```bash
+./gradlew build
+```
+##Running the Application
 
 You can run the app with:
-
+    ```bash
     ./gradlew npm_start
+    ```
+After successfully starting the application, you can access it via your web browser at the following URL:
 
-Once it is running, you can access it in a browser at http://localhost:8080
+```
+http://localhost:8080
+```
